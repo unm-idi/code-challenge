@@ -1,7 +1,7 @@
 # Programmer Analyst 2 Interview Problem
 
 ## Problem Definition
-Before students can take a course at UNM, they must meet that course's prerequisite requirements. As a simple example, in order to take MATH 1250, a student must have completed MATH 1220. However, some prerequisite requirements are more complicated than simply requiring a single course. They can be a logical combination of multiple courses, or even other logical combinations. For example, the prerequisite requirement for MATH 1512 looks like `(MATH 1230 and MATH 1240) or MATH 1250`.
+Before students can take a course at UNM, they must meet that course's prerequisite requirements. For example, in order to take MATH 1250 a student must have completed MATH 1220. However, some prerequisite requirements are more complicated than simply requiring a single course. They can be a logical combination of multiple courses, or even other logical combinations. For example, the prerequisite requirement for MATH 1512 looks like `(MATH 1230 and MATH 1240) or MATH 1250`.
 
 This problem consists of two parts:
 1. Write code that determines if a given course can be taken provided a list of courses that have already been completed. A course's prerequisite requirements can be read from the file `data/prerequisites.json`. See the section _Course Prerequisite Data_ for details on how the data is formatted. Below is an example of the inputs and expected output for one scenario:
