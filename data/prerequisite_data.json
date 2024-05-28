@@ -1,0 +1,351 @@
+{
+  "ECON 300": {
+    "type": "and",
+    "operands": [
+      {
+        "type": "course",
+        "code": "ECON 2110"
+      },
+      {
+        "type": "course",
+        "code": "ECON 2120"
+      },
+      {
+        "type": "or",
+        "operands": [
+          {
+            "type": "course",
+            "code": "ECON 307"
+          },
+          {
+            "type": "course",
+            "code": "MATH 1430"
+          },
+          {
+            "type": "course",
+            "code": "MATH 1512"
+          }
+        ]
+      }
+    ]
+  },
+  "AFAS 300": null,
+  "MATH 1220": {
+    "type": "or",
+    "operands": [
+      {
+        "type": "course",
+        "code": "MATH 1215"
+      },
+      {
+        "type": "and",
+        "operands": [
+          {
+            "type": "course",
+            "code": "MATH 1215X"
+          },
+          {
+            "type": "course",
+            "code": "MATH 1215Y"
+          },
+          {
+            "type": "course",
+            "code": "MATH 1215Z"
+          }
+        ]
+      }
+    ]
+  },
+  "MATH 1230": {
+    "type": "course",
+    "code": "MATH 1220"
+  },
+  "BIOL 1150": null,
+  "MATH 22": {
+    "type": "course",
+    "code": "MATH 21"
+  },
+  "ECE 483": {
+    "type": "and",
+    "operands": [
+      {
+        "type": "course",
+        "code": "ECE 322L"
+      },
+      {
+        "type": "course",
+        "code": "ECE 381"
+      }
+    ]
+  },
+  "MATH 11": null,
+  "ECE 206L": {
+    "type": "course",
+    "code": "ENGL 1120"
+  },
+  "ENGL 1110Y": {
+    "type": "course",
+    "code": "ENGL 1110X"
+  },
+  "ENGL 2210": {
+    "type": "course",
+    "code": "ENGL 1120"
+  },
+  "MATH 1215Z": {
+    "type": "course",
+    "code": "MATH 1215Y"
+  },
+  "ENG 120": {
+    "type": "course",
+    "code": "MATH 1220"
+  },
+  "ECE 381": {
+    "type": "course",
+    "code": "ECE 213"
+  },
+  "PHYS 1320": {
+    "type": "course",
+    "code": "PHYS 1310"
+  },
+  "MGMT 484": {
+    "type": "course",
+    "code": "MGMT 384"
+  },
+  "ECE 213": {
+    "type": "course",
+    "code": "ECE 203"
+  },
+  "MATH 99": null,
+  "MGMT 322": {
+    "type": "and",
+    "operands": [
+      {
+        "type": "course",
+        "code": "ECON 2120"
+      },
+      {
+        "type": "or",
+        "operands": [
+          {
+            "type": "course",
+            "code": "ENGL 2120"
+          },
+          {
+            "type": "course",
+            "code": "ENGL 2210"
+          }
+        ]
+      }
+    ]
+  },
+  "AFAS 400": {
+    "type": "course",
+    "code": "AFAS 301"
+  },
+  "MATH 1522": {
+    "type": "course",
+    "code": "MATH 1512"
+  },
+  "ECE 300": {
+    "type": "course",
+    "code": "MATH 1522"
+  },
+  "ECE 203": {
+    "type": "or",
+    "operands": [
+      {
+        "type": "course",
+        "code": "ENG 120"
+      },
+      {
+        "type": "course",
+        "code": "MATH 1522"
+      }
+    ]
+  },
+  "ECON 307": {
+    "type": "or",
+    "operands": [
+      {
+        "type": "course",
+        "code": "MATH 1220"
+      },
+      {
+        "type": "course",
+        "code": "MATH 1240"
+      }
+    ]
+  },
+  "FYEX 1010": null,
+  "MATH 12": {
+    "type": "course",
+    "code": "MATH 11"
+  },
+  "MATH 1512": {
+    "type": "or",
+    "operands": [
+      {
+        "type": "and",
+        "operands": [
+          {
+            "type": "course",
+            "code": "MATH 1230"
+          },
+          {
+            "type": "course",
+            "code": "MATH 1240"
+          }
+        ]
+      },
+      {
+        "type": "course",
+        "code": "MATH 1250"
+      }
+    ]
+  },
+  "ENGL 1110": null,
+  "MATH 1215X": {
+    "type": "or",
+    "operands": [
+      {
+        "type": "and",
+        "operands": [
+          {
+            "type": "course",
+            "code": "MATH 21"
+          },
+          {
+            "type": "course",
+            "code": "MATH 22"
+          }
+        ]
+      },
+      {
+        "type": "course",
+        "code": "MATH 100"
+      },
+      {
+        "type": "course",
+        "code": "FYEX 1010"
+      }
+    ]
+  },
+  "ENGL 2120": {
+    "type": "course",
+    "code": "ENGL 1120"
+  },
+  "ECON 2110": null,
+  "MATH 100": null,
+  "PHYS 2310": {
+    "type": "course",
+    "code": "PHYS 1320"
+  },
+  "MATH 1215": {
+    "type": "course",
+    "code": "MATH 100"
+  },
+  "ENGL 1110X": null,
+  "MGMT 384": {
+    "type": "course",
+    "code": "MGMT 322"
+  },
+  "MATH 1250": {
+    "type": "course",
+    "code": "MATH 1220"
+  },
+  "ENGL 1120": {
+    "type": "or",
+    "operands": [
+      {
+        "type": "course",
+        "code": "ENGL 1110"
+      },
+      {
+        "type": "course",
+        "code": "ENGL 1110Y"
+      },
+      {
+        "type": "course",
+        "code": "ENGL 1110Z"
+      }
+    ]
+  },
+  "MATH 1215Y": {
+    "type": "course",
+    "code": "MATH 1215X"
+  },
+  "MATH 1430": {
+    "type": "or",
+    "operands": [
+      {
+        "type": "course",
+        "code": "MATH 1220"
+      },
+      {
+        "type": "course",
+        "code": "MATH 1240"
+      },
+      {
+        "type": "course",
+        "code": "MATH 1250"
+      }
+    ]
+  },
+  "ECE 321L": {
+    "type": "and",
+    "operands": [
+      {
+        "type": "course",
+        "code": "ECE 206L"
+      },
+      {
+        "type": "course",
+        "code": "ECE 213"
+      }
+    ]
+  },
+  "PHYS 1310": {
+    "type": "course",
+    "code": "MATH 1512"
+  },
+  "ECE 371": {
+    "type": "and",
+    "operands": [
+      {
+        "type": "course",
+        "code": "ECE 300"
+      },
+      {
+        "type": "course",
+        "code": "PHYS 2310"
+      }
+    ]
+  },
+  "AFAS 301": {
+    "type": "course",
+    "code": "AFAS 300"
+  },
+  "ECE 322L": {
+    "type": "course",
+    "code": "ECE 321L"
+  },
+  "MATH 1240": {
+    "type": "course",
+    "code": "MATH 1220"
+  },
+  "ECON 2120": null,
+  "ENGL 1110Z": null,
+  "MATH 21": {
+    "type": "or",
+    "operands": [
+      {
+        "type": "course",
+        "code": "MATH 12"
+      },
+      {
+        "type": "course",
+        "code": "MATH 99"
+      }
+    ]
+  }
+}

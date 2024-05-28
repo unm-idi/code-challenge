@@ -1,0 +1,51 @@
+[
+  {
+    "course": "BIOL 1150",
+    "completedCourses": [],
+    "isSatisfied": true
+  },
+  {
+    "course": "AFAS 400",
+    "completedCourses": ["AFAS 301"],
+    "isSatisfied": true
+  },
+  {
+    "course": "AFAS 400",
+    "completedCourses": [],
+    "isSatisfied": false
+  },
+  {
+    "course": "MATH 1512",
+    "completedCourses": ["MATH 1230", "MATH 1240"],
+    "isSatisfied": true
+  },
+  {
+    "course": "MATH 1512",
+    "completedCourses": ["MATH 1215"],
+    "isSatisfied": false
+  },
+  {
+    "course": "MGMT 322",
+    "completedCourses": ["ENGL 1110"]
+  },
+  {
+    "course": "MGMT 484",
+    "completedCourses": []
+  },
+  {
+    "course": "ECE 371",
+    "completedCourses": ["MATH 1215", "PHYS 1320"]
+  },
+  {
+    "course": "ECE 483",
+    "completedCourses": []
+  },
+  {
+    "course": "ECON 300",
+    "completedCourses": ["ECON 307", "ECON 2120", "ECON 2110"]
+  },
+  {
+    "course": "ECON 300",
+    "completedCourses": ["ECON 307", "MATH 1430", "ECON 2110"]
+  }
+]
