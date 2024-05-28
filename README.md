@@ -13,7 +13,7 @@ OUTPUT:
   false
 ```
 
-2. Working off of your solution from part 1, modify your code to return a list of courses that the student will need to complete in order to satisfy the given course's prerequisite requirements. Note - while there could be multiple correct solutions, be careful not to include more courses than necessary. Below is an example of the inputs and expected output for one scenario:
+2. Working off of your solution from part 1, modify your code to return a list of courses that will need to be completed in order to satisfy the given course's prerequisite requirements. Note - while there could be multiple correct solutions, be careful not to include more courses than necessary. Below is an example of the inputs and expected output for one scenario:
 ```
 INPUTS:
   COURSE: 'MATH 1512'
