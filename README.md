@@ -4,7 +4,7 @@
 Before students can take a course at UNM, they must meet that courses prerequisite requirements. As a simple example, in order to take MATH 1250, a student must have completed MATH 1220. However, some prerequisite requirements are more complicated than simply requiring a single course. They can be a logical combination of multiple courses, or even other logical combinations. For example, the prerequisite requirement for MATH 1512 looks like `(MATH 1230 and MATH 1240) or MATH 1250`.
 
 This problem consists of two parts:
-1. Write code that determines if a student meets the prerequisite requirements for a given course provided a list of courses the student has already completed.
+1. Write code that determines if a given course can be taken provided a list of courses that have already been completed. A course's prerequisite requirements can be read from the file `data/prerequisites.json`. See the section _Course Prerequisite Data_ for details on how the data is formatted. Below is an example of the inputs and expected output for one scenario:
 ```
 INPUTS:
   COURSE: 'MATH 1512'
@@ -13,7 +13,7 @@ OUTPUT:
   false
 ```
 
-2. Working off of your solution in part 1, modify your code to return a list of courses that the student will need to complete in order to satisfy the given course's prerequisite requirements. Note - there can be multiple correct solutions, but be careful not to include more courses than necessary.
+2. Working off of your solution from part 1, modify your code to return a list of courses that the student will need to complete in order to satisfy the given course's prerequisite requirements. Note - while there could be multiple correct solutions, be careful not to include more courses than necessary. Below is an example of the inputs and expected output for one scenario:
 ```
 INPUTS:
   COURSE: 'MATH 1512'
@@ -36,11 +36,11 @@ OUTPUT:
 - You may use any programming language you'd like, though python or ruby are preferred.
 - Refrain from using any external libraries or code.
 - As cool as ChatGPT is, please don't use it to write code for you.
-- If you have any questions about the problem definition or the data itself, feel free to contact us at idi@unm.edu
+- If you have any questions about the problem definition or the data, feel free to contact us at idi@unm.edu
 
 
 ## Course Prerequisite Data
-In order to complete the above tasks, this repository includes a file,`course_data.json`, that contains prerequisite requirements for a handful of courses. The root object contains keys that represent a course code, and the value is an object specifying the requirements.
+In order to complete the above tasks, this repository includes a file,`data/prerequisites.json` that contain prerequisite requirements for several courses. The root object contains keys that represent a course code, and the value is an object specifying that course's prerequisite requirements.
 ```json
 {
   "MATH 1512": { ...requirementObject },
@@ -57,7 +57,7 @@ Requirement objects come in three types:
 
 A course with null indicates that the course has no requirements and can always be taken.
 
-Examples of the three corresponding json objects can be seen below.
+Examples of the three requirement json objects can be seen below.
 ```json
 {
   "type": "course",
@@ -66,16 +66,12 @@ Examples of the three corresponding json objects can be seen below.
 
 {
   "type": "and",
-  "operands": [
-    ...requirementObjects
-  ]
+  "operands": [ ... ] // Contains multiple requirement objects
 }
 
 {
   "type": "or",
-  "operands": [,
-    ...requirementObjects
-  ]
+  "operands": [ ... ] // Contains multiple requirement objects
 }
 ```
 
@@ -117,7 +113,7 @@ The file `data/tests.json` contains a list of json objects that represent a scen
   {
     "course": "MATH 1512",                // The course to evaluate
     "completedCourses": ["MATH 1250"],    // Course that have already been completed
-    "isSatisfied": true                   // Some of the objects contain the expected solution to part 1
+    "isSatisfied": true                   // Some cases contain the expected solution to part 1 to serve as a guide
   },
   ...
 ]
