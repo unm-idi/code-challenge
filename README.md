@@ -26,7 +26,7 @@ OUTPUT:
 ## Instructions
 1. Fork this repository.
 2. Write your code to solve the two challenges listed above.
-3. Using your code, create an output file that produces solutions for the scenarios listed in the `data/tests.json` file. Details can be found in the _Testing & Output File_ below.
+3. Using your code, create an output file that produces solutions for the scenarios listed in the `data/tests.json` file. Details can be found in the _Testing & Output File_ section below.
 4. Create a file named INSTRUCTIONS that detail how to run your code.
 5. Commit and push your code.
 6. Create a pull request.
