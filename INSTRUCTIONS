@@ -1,0 +1,16 @@
+1. Clone the reposiotry into the working directory using git and run it.
+2. To run the code, open terminal in the project directory and run the command "python app.py"
+3. This will generate a output file called "output.json" in the current project directory.
+4. We can open the output.json file and check the final results of the program.
+    4.1. the output is of the format 
+
+    [
+        {
+    "course": "AFAS 400",   // The course that was evaluated - copied from the test data
+    "completedCourses": [
+      "AFAS 301"
+    ],                      // The list of courses already completed - copied from the test data
+    "isSatisfied": true,    // The output your code produced from part 1
+    "coursesNeeded": []     // The output your code produced from part 2
+  }, ....
+    ]
