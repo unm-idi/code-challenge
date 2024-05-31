@@ -52,7 +52,8 @@ const analysis = (target, completed) => {
 
         const result = prereqsSatisfied(completed, targetPrereqs)
 
-        console.log(result)
+        // console.log(result)
+        return result
 
     } catch (e) {
         console.error(e)
@@ -65,8 +66,17 @@ const testTarget = "ECON 300"
 const testCompleted = ["ECON 2110", "ECON 2120", "MATH 1512", "MATH 1430"]
 
 for(let i = 0; i < tests.length; i++){
-    console.log(tests[i])
-    analysis(tests[i]['course'], tests[i]['completedCourses'])
+    tests[i]['isSatisfied'] = analysis(tests[i]['course'], tests[i]['completedCourses'])
 }
+
+fs.writeFile(
+    "output.json",
+    JSON.stringify(tests),
+    err => {
+        if (err) throw err
+        console.log("Done writing")
+    }
+)
+console.log(tests)
 // analysis(testTarget, testCompleted)
 
