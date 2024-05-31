@@ -15,15 +15,37 @@ const getPrereqs = (target) => {
 // completedCourses: the courses an individual has already completed
 const prereqsSatisfied = (completedCourses, targetPrereqs) => {
 
-    switch (targetPrereqs['type']) {
-        // Base case:  if we reach the 'bottom' level of the prereqs, 
-        // check if that class is in our taken courses array
-        case 'course':
-            return completedCourses.includes(targetPrereqs['code'])
+    const type = targetPrereqs['type']
+
+    // Base case:  if we reach the 'bottom' level of the prereqs, 
+    // check if that class is in our taken courses array
+    if (type === 'course') {
+        return completedCourses.includes(targetPrereqs['code'])
 
         // Otherwise, use the appropriate logic on the next level
+    } else {
+        const boolops = {
+            'and': (a, b) => a && b,
+            'or': (a, b) => a || b
+        }
+
+        // if we are using the "and" operator, then we begin true 
+        // then if any operands are false, return false
+        // if we are using the "or" operator, we do the opposite
+        const start = (type === "and")
+
+        return targetPrereqs['operands'].reduce((acc, curr) =>
+            boolops[type](acc, prereqsSatisfied(completedCourses, curr)),
+            start)
+    }
+
+
+    switch (targetPrereqs['type']) {
+        case 'course':
+
+
+
         case 'and':
-            // begin true and then if any operands are false, return false
             return targetPrereqs['operands'].reduce((acc, curr) => acc && prereqsSatisfied(completedCourses, curr), true)
 
         case 'or':
@@ -37,10 +59,10 @@ const prereqsSatisfied = (completedCourses, targetPrereqs) => {
 
 
 const testTarget = "ECON 300"
-const testCompleted = ["ECON 2110", "ECON 2120", "MATH 1512"]
+const testCompleted = ["ECON 2110", "ECON 2120", "MATH 1512", "MATH 1430"]
 
 const analysis = (target, completed) => {
-    try{
+    try {
         const targetPrereqs = getPrereqs(target)
 
         const result = prereqsSatisfied(completed, targetPrereqs)
@@ -51,7 +73,6 @@ const analysis = (target, completed) => {
         console.error(e)
     }
 
-    
 }
 
 analysis(testTarget, testCompleted)
