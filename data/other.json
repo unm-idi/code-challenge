@@ -1,0 +1,38 @@
+{
+    "MATH 1215Z": {
+        "type": "course",
+        "code": "MATH 1215Y"
+    },
+    "MATH 1215Y": {
+        "type": "course",
+        "code": "MATH 1215X"
+    },
+    "MATH 1215X": {
+        "type": "or",
+        "operands": [
+            {
+                "type": "course",
+                "code": "MATH 1215X2"
+            },
+            {
+                "type": "course",
+                "code": "MATH 1215W"
+            }
+        ]
+    },
+    "MATH 1215X2": null,
+    "MATH 1215W": {
+        "type": "course",
+        "code": "MATH 1215V"
+    },
+    "MATH 1215V": {
+        "type": "course",
+        "code": "MATH 1215U"
+    },
+    "MATH 1215U": {
+        "type": "course",
+        "code": "MATH 1215T"
+    },
+    "MATH 1215T": null
+}
+

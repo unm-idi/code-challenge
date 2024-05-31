@@ -61,22 +61,77 @@ const analysis = (target, completed) => {
 
 }
 
+const findFewestAdditionalCourses = (targetPrereqs, completed, memo) => {
+    
+    if(!targetPrereqs) return []
 
-const testTarget = "ECON 300"
-const testCompleted = ["ECON 2110", "ECON 2120", "MATH 1512", "MATH 1430"]
+    const type = targetPrereqs['type']
 
-for(let i = 0; i < tests.length; i++){
-    tests[i]['isSatisfied'] = analysis(tests[i]['course'], tests[i]['completedCourses'])
+    if(type === 'course') {
+        let subProblem = targetPrereqs['code']
+
+        if(completed.includes(subProblem)) 
+            return []
+
+        let subPrereqs = getPrereqs(subProblem)
+
+        let subSolution = findFewestAdditionalCourses(subPrereqs, completed, memo)
+        subSolution.push(subProblem)
+
+        return subSolution
+    }
+
+    let operands = targetPrereqs['operands']
+
+    if(type === 'or') {
+        let minLength = Infinity
+        let bestSubSolution
+
+        for(let i = 0; i < operands.length; i++){
+
+            let subPrereqs = operands[i]
+            let subSolution = findFewestAdditionalCourses(subPrereqs, completed, memo)
+
+            if(subSolution.length < minLength){
+                minLength = subSolution.length
+                bestSubSolution = subSolution.slice()
+            }
+
+        }
+
+        return bestSubSolution
+    }
+
+    if(type === 'and') {
+        let totalSubSolution = []
+        for(let i = 0; i < operands.length; i++){
+            let subPrereqs = operands[i]
+            let subSolution = findFewestAdditionalCourses(subPrereqs, completed, memo)
+
+            totalSubSolution.push(subSolution)
+        }
+
+        return totalSubSolution
+    }
+
 }
 
-fs.writeFile(
-    "output.json",
-    JSON.stringify(tests),
-    err => {
-        if (err) throw err
-        console.log("Done writing")
-    }
-)
-console.log(tests)
-// analysis(testTarget, testCompleted)
+const testTarget = "MATH 1215Z"
+const testCompleted = ["MATH 1215V"]
+const testPrereqs = getPrereqs(testTarget)
+const result = findFewestAdditionalCourses(testPrereqs, testCompleted, {})
+console.log(result)
+
+// for(let i = 0; i < tests.length; i++){
+//     tests[i]['isSatisfied'] = analysis(tests[i]['course'], tests[i]['completedCourses'])
+// }
+
+// fs.writeFile(
+//     "output.json",
+//     JSON.stringify(tests),
+//     err => {
+//         if (err) throw err
+//         console.log("Done writing")
+//     }
+// )
 
