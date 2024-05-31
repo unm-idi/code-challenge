@@ -15,6 +15,8 @@ const getPrereqs = (target) => {
 // completedCourses: the courses an individual has already completed
 const prereqsSatisfied = (completedCourses, targetPrereqs) => {
 
+    if(!targetPrereqs) return true
+
     const type = targetPrereqs['type']
 
     // Base case:  if we reach the 'bottom' level of the prereqs, 
@@ -22,7 +24,7 @@ const prereqsSatisfied = (completedCourses, targetPrereqs) => {
     if (type === 'course') {
         return completedCourses.includes(targetPrereqs['code'])
 
-        // Otherwise, use the appropriate logic on the next level
+    // Otherwise, use the appropriate logic on the next level
     } else {
         const boolops = {
             'and': (a, b) => a && b,
@@ -38,28 +40,11 @@ const prereqsSatisfied = (completedCourses, targetPrereqs) => {
             boolops[type](acc, prereqsSatisfied(completedCourses, curr)),
             start)
     }
-
-
-    switch (targetPrereqs['type']) {
-        case 'course':
-
-
-
-        case 'and':
-            return targetPrereqs['operands'].reduce((acc, curr) => acc && prereqsSatisfied(completedCourses, curr), true)
-
-        case 'or':
-            // begin false, then if any operands are true, return true
-            return targetPrereqs['operands'].reduce((acc, curr) => acc || prereqsSatisfied(completedCourses, curr), false)
-    }
 }
 
 
 
 
-
-const testTarget = "ECON 300"
-const testCompleted = ["ECON 2110", "ECON 2120", "MATH 1512", "MATH 1430"]
 
 const analysis = (target, completed) => {
     try {
@@ -75,5 +60,13 @@ const analysis = (target, completed) => {
 
 }
 
-analysis(testTarget, testCompleted)
+
+const testTarget = "ECON 300"
+const testCompleted = ["ECON 2110", "ECON 2120", "MATH 1512", "MATH 1430"]
+
+for(let i = 0; i < tests.length; i++){
+    console.log(tests[i])
+    analysis(tests[i]['course'], tests[i]['completedCourses'])
+}
+// analysis(testTarget, testCompleted)
 
