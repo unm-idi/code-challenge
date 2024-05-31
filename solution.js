@@ -109,7 +109,7 @@ for(let i = 0; i < tests.length; i++){
 // Write output.json file
 fs.writeFile(
     "output.json",
-    JSON.stringify(tests),
+    JSON.stringify(tests, null, 4),
     err => {
         if (err) throw err
         console.log("Done writing")
