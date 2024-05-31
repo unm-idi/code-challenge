@@ -46,20 +46,20 @@ const prereqsSatisfied = (completedCourses, targetPrereqs) => {
 
 
 
-// const analysis = (target, completed) => {
-//     try {
-//         const targetPrereqs = getPrereqs(target)
+const analysis = (target, completed) => {
+    try {
+        const targetPrereqs = getPrereqs(target)
 
-//         const result = prereqsSatisfied(completed, targetPrereqs)
+        const result = prereqsSatisfied(completed, targetPrereqs)
 
-//         // console.log(result)
-//         return result
+        // console.log(result)
+        return result
 
-//     } catch (e) {
-//         console.error(e)
-//     }
+    } catch (e) {
+        console.error(e)
+    }
 
-// }
+}
 
 const findFewestAdditionalCourses = (targetPrereqs, completed, memo) => {
     
@@ -113,7 +113,6 @@ const findFewestAdditionalCourses = (targetPrereqs, completed, memo) => {
                 if(totalSubSolution.includes(course)) continue
                 totalSubSolution.push(course)
             }
-            // totalSubSolution.push(subSolution)
         }
 
         return totalSubSolution
@@ -121,16 +120,34 @@ const findFewestAdditionalCourses = (targetPrereqs, completed, memo) => {
 
 }
 
-const testTarget = "MATH 1512"
-const testCompleted = []
-const testPrereqs = getPrereqs(testTarget)
-const result = findFewestAdditionalCourses(testPrereqs, testCompleted, {})
-console.log(result)
 
-// for(let i = 0; i < tests.length; i++){
-//     tests[i]['isSatisfied'] = analysis(tests[i]['course'], tests[i]['completedCourses'])
-// }
+const solve = (target, completed) => {
+    try {
+        const targetPrereqs = getPrereqs(target)
 
+        const result = findFewestAdditionalCourses( targetPrereqs, completed, {})
+
+        return result
+
+    } catch (e) {
+        console.error(e)
+    }
+
+}
+
+// const testTarget = "MATH 1512"
+// const testCompleted = ["MATH 1215"]
+// const testPrereqs = getPrereqs(testTarget)
+// const result = findFewestAdditionalCourses(testPrereqs, testCompleted, {})
+// console.log(result)
+
+for(let i = 0; i < tests.length; i++){
+    let fewestAdditionalCoursesNeeded = solve(tests[i]['course'], tests[i]['completedCourses'])
+    tests[i]['isSatisfied'] = (fewestAdditionalCoursesNeeded.length === 0)
+    tests[i]['coursesNeeded'] = fewestAdditionalCoursesNeeded
+}
+
+console.log(tests)
 // fs.writeFile(
 //     "output.json",
 //     JSON.stringify(tests),
