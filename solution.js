@@ -46,20 +46,20 @@ const prereqsSatisfied = (completedCourses, targetPrereqs) => {
 
 
 
-const analysis = (target, completed) => {
-    try {
-        const targetPrereqs = getPrereqs(target)
+// const analysis = (target, completed) => {
+//     try {
+//         const targetPrereqs = getPrereqs(target)
 
-        const result = prereqsSatisfied(completed, targetPrereqs)
+//         const result = prereqsSatisfied(completed, targetPrereqs)
 
-        // console.log(result)
-        return result
+//         // console.log(result)
+//         return result
 
-    } catch (e) {
-        console.error(e)
-    }
+//     } catch (e) {
+//         console.error(e)
+//     }
 
-}
+// }
 
 const findFewestAdditionalCourses = (targetPrereqs, completed, memo) => {
     
@@ -105,10 +105,15 @@ const findFewestAdditionalCourses = (targetPrereqs, completed, memo) => {
     if(type === 'and') {
         let totalSubSolution = []
         for(let i = 0; i < operands.length; i++){
+
             let subPrereqs = operands[i]
             let subSolution = findFewestAdditionalCourses(subPrereqs, completed, memo)
 
-            totalSubSolution.push(subSolution)
+            for(let course of subSolution){
+                if(totalSubSolution.includes(course)) continue
+                totalSubSolution.push(course)
+            }
+            // totalSubSolution.push(subSolution)
         }
 
         return totalSubSolution
@@ -116,8 +121,8 @@ const findFewestAdditionalCourses = (targetPrereqs, completed, memo) => {
 
 }
 
-const testTarget = "MATH 1215Z"
-const testCompleted = ["MATH 1215V"]
+const testTarget = "MATH 1512"
+const testCompleted = []
 const testPrereqs = getPrereqs(testTarget)
 const result = findFewestAdditionalCourses(testPrereqs, testCompleted, {})
 console.log(result)
