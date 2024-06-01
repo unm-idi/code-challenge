@@ -1,0 +1,127 @@
+[
+  {
+    "course": "BIOL 1150",
+    "completedCourses": [],
+    "isSatisfied": true,
+    "coursesNeeded": []
+  },
+  {
+    "course": "AFAS 400",
+    "completedCourses": [
+      "AFAS 301"
+    ],
+    "isSatisfied": true,
+    "coursesNeeded": []
+  },
+  {
+    "course": "AFAS 400",
+    "completedCourses": [],
+    "isSatisfied": false,
+    "coursesNeeded": [
+      "AFAS 300",
+      "AFAS 301"
+    ]
+  },
+  {
+    "course": "MATH 1512",
+    "completedCourses": [
+      "MATH 1230",
+      "MATH 1240"
+    ],
+    "isSatisfied": true,
+    "coursesNeeded": []
+  },
+  {
+    "course": "MATH 1512",
+    "completedCourses": [
+      "MATH 1215"
+    ],
+    "isSatisfied": false,
+    "coursesNeeded": [
+      "MATH 1250",
+      "MATH 1220"
+    ]
+  },
+  {
+    "course": "MGMT 322",
+    "completedCourses": [
+      "ENGL 1110"
+    ],
+    "isSatisfied": false,
+    "coursesNeeded": [
+      "ECON 2120",
+      "ENGL 2120",
+      "ENGL 1120"
+    ]
+  },
+  {
+    "course": "MGMT 484",
+    "completedCourses": [],
+    "isSatisfied": false,
+    "coursesNeeded": [
+      "MGMT 322",
+      "ENGL 2120",
+      "ENGL 1120",
+      "ECON 2120",
+      "MGMT 384",
+      "ENGL 1110"
+    ]
+  },
+  {
+    "course": "ECE 371",
+    "completedCourses": [
+      "MATH 1215",
+      "PHYS 1320"
+    ],
+    "isSatisfied": false,
+    "coursesNeeded": [
+      "MATH 1522",
+      "MATH 1512",
+      "MATH 1250",
+      "MATH 1220",
+      "ECE 300",
+      "PHYS 2310"
+    ]
+  },
+  {
+    "course": "ECE 483",
+    "completedCourses": [],
+    "isSatisfied": false,
+    "coursesNeeded": [
+      "ECE 213",
+      "ECE 321L",
+      "ECE 381",
+      "MATH 1220",
+      "MATH 1215",
+      "ECE 206L",
+      "ENGL 1120",
+      "ECE 203",
+      "MATH 100",
+      "ENG 120",
+      "ENGL 1110",
+      "ECE 322L"
+    ]
+  },
+  {
+    "course": "ECON 300",
+    "completedCourses": [
+      "ECON 307",
+      "ECON 2120",
+      "ECON 2110"
+    ],
+    "isSatisfied": true,
+    "coursesNeeded": []
+  },
+  {
+    "course": "ECON 300",
+    "completedCourses": [
+      "ECON 307",
+      "MATH 1430",
+      "ECON 2110"
+    ],
+    "isSatisfied": false,
+    "coursesNeeded": [
+      "ECON 2120"
+    ]
+  }
+]
