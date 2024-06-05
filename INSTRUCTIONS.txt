@@ -1,0 +1,6 @@
+To run this program:
+
+Ensure that you have Ruby 3.1.2 or higher installed.
+Open a command prompt and navigate to the folder where this INSTRUCTIONS.txt file resides.
+Type "Ruby sort.rb" and press enter/return.
+When you open it, the output.json file should now contain the output of the program.
