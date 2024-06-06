@@ -73,11 +73,7 @@ def objectiveProcessor(course,completed)
             objTwo = []
         else
             objOne = "false"
-            if ($firstArray - completed).length < $lastArray.length
-                objTwo = $lastArray - completed
-            else
-                objTwo = $firstArray
-            end
+            objTwo = ($firstArray + $lastArray) - completed
         end
 
     end
