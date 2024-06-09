@@ -9,12 +9,14 @@
         "completedCourses": [
             "AFAS 301"
         ],
-        "isSatisfied": true
+        "isSatisfied": true,
+        "coursesNeeded": null
     },
     {
         "course": "AFAS 400",
         "completedCourses": [],
-        "isSatisfied": false
+        "isSatisfied": false,
+        "coursesNeeded": "AFAS 301"
     },
     {
         "course": "MATH 1512",
@@ -22,25 +24,35 @@
             "MATH 1230",
             "MATH 1240"
         ],
-        "isSatisfied": true
+        "isSatisfied": false,
+        "coursesNeeded": [
+            "MATH 1250"
+        ]
     },
     {
         "course": "MATH 1512",
         "completedCourses": [
             "MATH 1215"
         ],
-        "isSatisfied": false
+        "isSatisfied": false,
+        "coursesNeeded": [
+            "MATH 1250"
+        ]
     },
     {
         "course": "MGMT 322",
         "completedCourses": [
             "ENGL 1110"
         ],
+        "coursesNeeded": [
+            "ECON 2120"
+        ],
         "isSatisfied": false
     },
     {
         "course": "MGMT 484",
         "completedCourses": [],
+        "coursesNeeded": "MGMT 384",
         "isSatisfied": false
     },
     {
@@ -49,11 +61,19 @@
             "MATH 1215",
             "PHYS 1320"
         ],
+        "coursesNeeded": [
+            "ECE 300",
+            "PHYS 2310"
+        ],
         "isSatisfied": false
     },
     {
         "course": "ECE 483",
         "completedCourses": [],
+        "coursesNeeded": [
+            "ECE 322L",
+            "ECE 381"
+        ],
         "isSatisfied": false
     },
     {
@@ -71,6 +91,9 @@
             "ECON 307",
             "MATH 1430",
             "ECON 2110"
+        ],
+        "coursesNeeded": [
+            "ECON 2120"
         ],
         "isSatisfied": false
     }
