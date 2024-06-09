@@ -1,0 +1,1 @@
+Running this script assumes the presence of at least Python 3.8 on the target machine. Tested against 3.11. The Python script `solution.py` can be executed from the command line by running `python3 solution.py`. Results will be outputted to the file named `output.json` located in the root directory.

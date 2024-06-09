@@ -1,0 +1,100 @@
+[
+    {
+        "course": "BIOL 1150",
+        "completedCourses": [],
+        "isSatisfied": true
+    },
+    {
+        "course": "AFAS 400",
+        "completedCourses": [
+            "AFAS 301"
+        ],
+        "isSatisfied": true,
+        "coursesNeeded": null
+    },
+    {
+        "course": "AFAS 400",
+        "completedCourses": [],
+        "isSatisfied": false,
+        "coursesNeeded": "AFAS 301"
+    },
+    {
+        "course": "MATH 1512",
+        "completedCourses": [
+            "MATH 1230",
+            "MATH 1240"
+        ],
+        "isSatisfied": false,
+        "coursesNeeded": [
+            "MATH 1250"
+        ]
+    },
+    {
+        "course": "MATH 1512",
+        "completedCourses": [
+            "MATH 1215"
+        ],
+        "isSatisfied": false,
+        "coursesNeeded": [
+            "MATH 1250"
+        ]
+    },
+    {
+        "course": "MGMT 322",
+        "completedCourses": [
+            "ENGL 1110"
+        ],
+        "coursesNeeded": [
+            "ECON 2120"
+        ],
+        "isSatisfied": false
+    },
+    {
+        "course": "MGMT 484",
+        "completedCourses": [],
+        "coursesNeeded": "MGMT 384",
+        "isSatisfied": false
+    },
+    {
+        "course": "ECE 371",
+        "completedCourses": [
+            "MATH 1215",
+            "PHYS 1320"
+        ],
+        "coursesNeeded": [
+            "ECE 300",
+            "PHYS 2310"
+        ],
+        "isSatisfied": false
+    },
+    {
+        "course": "ECE 483",
+        "completedCourses": [],
+        "coursesNeeded": [
+            "ECE 322L",
+            "ECE 381"
+        ],
+        "isSatisfied": false
+    },
+    {
+        "course": "ECON 300",
+        "completedCourses": [
+            "ECON 307",
+            "ECON 2120",
+            "ECON 2110"
+        ],
+        "isSatisfied": true
+    },
+    {
+        "course": "ECON 300",
+        "completedCourses": [
+            "ECON 307",
+            "MATH 1430",
+            "ECON 2110"
+        ],
+        "coursesNeeded": [
+            "ECON 2120"
+        ],
+        "isSatisfied": false
+    }
+]
